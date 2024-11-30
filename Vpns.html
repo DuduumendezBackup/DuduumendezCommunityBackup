@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<style>
+  button {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+    
+  }
+  
+  button:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  body {
+    background-color: gold;
+
+  }
+
+  #centered-div {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  a {
+    text-decoration: none;
+   }
+video {
+  width: auto;
+  height: 20cm;
+}
+footer {
+background-color: #00ffd5;
+}
+
+.video-container {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.video-container img {
+  width: auto;
+  height: 10cm;
+}
+
+
+
+.menu-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  z-index: 1000;
+}
+
+.menu-bar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu-bar .logo {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.menu-bar .menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar .menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu-bar .menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu-bar .menu a:hover {
+  color: #ccc;
+}
+
+.menu-bar .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  display: none;
+}
+
+.menu-bar .submenu li {
+  display: block;
+  margin-right: 0;
+}
+
+.menu-bar .submenu a {
+  color: #fff;
+}
+
+.menu-bar .submenu a:hover {
+  color: #ccc;
+}
+
+.menu-bar li:hover .submenu {
+  display: block;
+}
+
+.intro {
+  background-color: #ccc;
+  
+  margin: 5px; ;
+  padding: 5px; ;
+  width: auto;
+}
+
+.para {
+  background-color: #ccc;
+  
+  margin: 5px; ;
+  padding: 5px; ;
+  width: auto;
+}
+
+.free {
+  background-color: #ccc;
+  
+  margin: 5px; ;
+  padding: 5px; ;
+  width: auto;
+}
+</style>
+<body>
+
+
+<!-- Menu Bar -->
+<nav class="menu-bar">
+  <div class="container">
+    <div class="logo">
+      <a href="#"><b>DUDUU MENDEZ COMMUNITY</b></a>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mendez.html">Services</a>
+        <ul class="submenu">
+          <li><a href="Vpns.html">VPN Services</a></li>
+          <li><a href="main.html">APK Services</a></li>
+          <li><a href="mendezbot.html">Other Services</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+     <!--<P><b>CHOOSE SERVICE YOU WANT</b></P> -->
+
+<div class="video-container">
+<img src="whatapp background.jpeg" alt="DUDUU-MENDEZ">
+</div>
+
+<div class="intro">
+  <h4>VPNS FILES OF SOCKSIP AND HTTP CUSTOM</h4>
+  <p>Huduma ya files za vpn za SOCKSIP na HTTP CUSTOM ipo katika mitandao yote ila inategemea na speed 
+    ya server zetu katika mtandao huo. Kwani kuna baadhi ya mitandao server inaweza ikapanda kwa mda flani baadae ikashuka 
+  
+  </p>
+  <p>SPEED YA FILES ZETU KATIKA MITANDAO IPO KAWA IFUATAVYO</p>
+  <ul>
+    <li>TIGO == <em>VIZURI</em></li>
+    <li>VODACOM == <em>HAITABILIKI</em></li>
+    <li>AIRTEL == <em>HAITABILIKI</em></li>
+    <li>HALOTEL == <em>HAITABILIKI</em></li>
+  </ul><br>
+  <h1>GHARAMA YA PREMIUM FILES</h1>
+  <ul>
+    <li>WIKI MBILI == Tsh 1,000/=</li>
+    <li>MWEZI == Tsh 2,000/=</li>
+  </ul>
+  <button><a href="https://wa.me/255749750707?text=Hi+*DUDUU_MENDEZ*,+NATAKA+KUNUNUA+FILES+KWA+HUDUMA+YA+mwezi/wiki:-"><B>BUY FILES</B></a></button><br><br><br>
+
+</div>
+
+
+<div class="para">
+<P>Hii ni kwa wale waliolipia huduma ya mwezi tu!</P>
+<p>Kila mtu atakuwa na files zake zisizopungua mbili, ambazo zitakuwa zinafanyiwa update kwa mda flani, ili zisipungue kasi</p>
+<p>Ratiba ya update itakuwa kama ifuatavyo
+  <ul>
+    <li>JUMANNE kuanzia saa 8 mchana mpaka saa 11 jioni</li>
+    <li>IJUMAA kuanzia saa 2 usiku hadi saa 6 usiku</li>
+  </ul>
+</p><br><br>
+<button><a href="VpnsProtection.html"><b>PREMIUM FILES</b></a></button>
+<p>NB: Tunza password ili kuzuia watu kutumia files zako kwani file hizi ni kwa mtu mmoja tu!, IKITOKEA UKASAHAU PASSWORD YAKO WASILIANA NA ADMIN YEYOTE </p><br><br>
+</div>
+
+<div class="free">
+  <h1><b>FREE FILES</b></h1>
+  <p>Hapa utajipatia free files za vpn mbalimbali kama <b>SOCKSIP, na HTTP CUSTOM</b></p>
+  <p>File hizi zitakuwa za mitandao mbalimbali hasa TIGO pamoja na VODACOM, katika files hizi
+    speed huweza ikawa ndogo mda mwingine, kwasababu ya idadi ya watu kuwa wengi. KAMA UTATAKA FILES ZAKO PEKE YAKO BASI 
+    WASILIANA NA DUDUU-MENDEZ
+  </p>
+  <button type="submit"><a href="freefiles.html"><b>FREE FILES</b></a></button>
+</div>
+
+      <p1>HAVING ANY ISSUE OR SUPPORT CLICK BUTTON BELOW</p1><br>
+  <button><a href="contact.html"><b>CONTACT US</b></a></button><br><br>
+  <button><a href="https://chat.whatsapp.com/DPbGxQ2RCxv8W7oSsRa9g7"><b>WHATSAPP GROUP</b></a></button>
+  </div>
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>About Us</h4>
+          <p>&copy; 2024 DUDUU-MENDEZ. All rights reserved by WADUDUU GROUP.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="main.html">APks</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Stay Connected</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100022647640840&mibextid=ZbWKwL" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/duduu_mendez?igsh=MWF0ZHoybWhyYzhzcw==" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://x.com/Ngalabu_jr?t=RI6k8k6WdURBHcrz_5SEcw&s=09" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

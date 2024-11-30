@@ -1,0 +1,29 @@
+#welcome-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#name-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name-input {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#submit-btn {
+    width: 100px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

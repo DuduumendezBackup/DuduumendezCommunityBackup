@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts Page</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .post {
+            margin: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .post:last-child {
+            border-bottom: none;
+        }
+
+        .post-image {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 10px;
+            float: left;
+        }
+
+        .post-content {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .post-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        /* style.css */
+
+.post-image.enlarged {
+  width: 200px;
+  height: 200px;
+  transition: width 0.5s, height 0.5s;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post">
+            <img src="post1.jpg" alt="Post 1 Image" class="post-image">
+            <div class="post-text">
+                <h2 class="post-heading">Post 1</h2>
+                <p class="post-content">This is the content of post 1.</p>
+            </div>
+        </div>
+        <div class="post">
+            <img src="post2.jpg" alt="Post 2 Image" class="post-image">
+            <div class="post-text">
+                <h2 class="post-heading">Post 2</h2>
+                <p class="post-content">This is the content of post 2.</p>
+            </div>
+        </div>
+        <div class="post">
+            <img src="post3.jpg" alt="Post 3 Image" class="post-image">
+            <div class="post-text">
+                <h2 class="post-heading">Post 3</h2>
+                <p class="post-content">This is the content of post 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+
+// Add an event listener to each post element
+document.querySelectorAll('.post').forEach(post => {
+  post.addEventListener('click', () => {
+    // Get the image element within the post
+    const image = post.querySelector('.post-image');
+
+    // Toggle the "enlarged" class on the image element
+    image.classList.toggle('enlarged');
+  });
+});
+
+// script.js
+
+// Add an event listener to each post element
+document.querySelectorAll('.post').forEach(post => {
+  let isSliding = false;
+  let startX, startY, endX, endY;
+
+  post.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+    isSliding = true;
+  });
+
+  post.addEventListener('touchmove', (event) => {
+    if (isSliding) {
+      endX = event.touches[0].clientX;
+      endY = event.touches[0].clientY;
+
+      // Check if the user is sliding horizontally
+      if (Math.abs(endX - startX) > Math.abs(endY - startY)) {
+        // Get the image element within the post
+        const image = post.querySelector('.post-image');
+
+        // Enlarge the image
+        image.classList.add('enlarged');
+      }
+    }
+  });
+
+  post.addEventListener('touchend', () => {
+    isSliding = false;
+  });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url(matrix.gif);
+            font-family: Arial, sans-serif;
+        }
+        #login {
+            text-align: center;
+            background-color: black;
+        }
+        h1 {
+            color: green;
+        }
+        div {
+            height: 7cm;
+            width: 13cm;
+        }
+        button {
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h1>Please enter the password:</h1>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()"><B>Submit</B></button>
+
+
+
+        
+
+    </div>
+
+    <script>
+        function checkPassword() {
+            const correctPassword = 'MENDEZ1234';
+            const enteredPassword = document.getElementById('password').value;
+
+            if (enteredPassword === correctPassword) {
+                // Redirect to the protected page
+                window.location.href = 'premium.html';
+            } else {
+                alert('Incorrect password. Please try again. Otherwise your device will be blocked+');
+            }
+        }
+    </script>
+</body>
+</html>
